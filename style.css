@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  background: #fffbf5;
+  background: #58f8eb; /* 解決衝突：採用藍綠色 */
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(139, 109, 82, 0.12);
   width: 480px;

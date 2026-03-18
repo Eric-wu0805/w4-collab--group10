@@ -64,6 +64,9 @@ git merge feature/add-counter
 
 **思考：merge 後 git log 長什麼樣子？**
 
+
+
+
 ---
 
 ## 練習三：解決 Merge Conflict

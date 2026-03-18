@@ -89,9 +89,8 @@ header .subtitle { font-size: 13px; opacity: 0.85; margin-top: 4px; }
 }
 
 .input-area button {
-  /* 日系櫻花粉按鈕 */
-  background: #d4a0a7;
-  color: #fffbf5;
+  background: #1a73e8;  /* conflict-a：深藍色 */
+  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 8px;

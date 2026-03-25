@@ -292,6 +292,44 @@ header {
   transform: scale(0.95);
 }
 
+/* ===== 快速回覆 ===== */
+.quick-replies {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 10px;
+  overflow-x: auto;
+}
+
+.quick-replies::-webkit-scrollbar {
+  display: none;
+}
+
+.qr-btn {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: var(--bot-text);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.qr-btn:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: var(--input-focus);
+}
+
+.qr-btn.clear-btn {
+  color: #e53e3e;
+  border-color: #fc8181;
+}
+
+.qr-btn.clear-btn:hover {
+  background: rgba(229, 62, 62, 0.1);
+}
+
 /* ===========================
    深色模式
    =========================== */
@@ -321,4 +359,8 @@ body.dark .msg-avatar {
 
 body.dark .dark-toggle {
   background: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .qr-btn.clear-btn {
+  color: #fc8181;
 }

@@ -36,6 +36,12 @@
       </div>
     </div>
 
+    <div class="quick-replies">
+      <button class="qr-btn" onclick="sendQuickReply('我想學 Git')">我想學 Git</button>
+      <button class="qr-btn" onclick="sendQuickReply('你是誰？')">你是誰？</button>
+      <button class="qr-btn clear-btn" onclick="clearChat()">清除對話</button>
+    </div>
+
     <div class="input-area">
       <input id="user-input" type="text" placeholder="輸入訊息..." autocomplete="off">
       <button id="send-btn" onclick="sendMessage()">
@@ -48,6 +54,24 @@
   </div>
 
   <script>
+    function sendQuickReply(text) {
+      document.getElementById('user-input').value = text;
+      sendMessage();
+    }
+
+    function clearChat() {
+      const chatBox = document.getElementById('chat-box');
+      chatBox.innerHTML = `
+        <div class="message bot fade-in">
+          <div class="msg-avatar">🤖</div>
+          <div class="msg-bubble">
+            對話紀錄已清除！有什麼我可以幫忙的嗎？
+            <span class="msg-time">${getTimeStr()}</span>
+          </div>
+        </div>
+      `;
+    }
+
     function getTimeStr() {
       const now = new Date();
       return now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
